@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+Empresa React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto consiste em um site de dados empresariais de uma empresa, onde temos: 
 
-## Available Scripts
+-dados referentes a funcionarios
+• Cargos
+• Numero de Vendas(notificando dados como funcionario do mês)
+• email, idades, tempo de trabalho, etc...
 
-In the project directory, you can run:
+- Financeiro da empresa
+• graficos com lucros do mês, ano...
+• vendas de cada filial e informções de despesas, numeros de funcionarios de cada filial
 
-### `npm start`
+-sistema de notificação de atividades por email
+• Email automaticos, com informções de aniversario de funcionarios, dias de pagamentos, emails de funcionarios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Interface do Usuário:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Página inicial com resumo.
+Seção de funcionários.
+Seção financeira com gráficos.
+Sistema de notificação por email.
+Funcionalidades:
 
-### `npm test`
+Gerenciamento de funcionários.
+Registro de dados financeiros.
+Agendador de notificações automáticas.
+Autenticação e autorização.
+Tecnologias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React.js para a interface do usuário.
+Back-end e banco de dados.
+Bibliotecas ou serviços de envio de email.
+Bibliotecas de gráficos, como Chart.js.
+Design e Usabilidade:
 
-### `npm run build`
+Design limpo e intuitivo.
+Sistema de pesquisa e filtragem eficaz.
+Gráficos e relatórios de fácil compreensão.
+Testes e Segurança:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Testes rigorosos.
+Medidas de segurança para proteção de dados.
+Implantação:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Implantação em servidor web seguro.
+Manutenção:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Atualizações regulares e adição de novos recursos.
