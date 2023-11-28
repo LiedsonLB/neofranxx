@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Krub:wght@200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --orange-color: #F59115;
+    --white-color: #FFFFFF;
+    --gray-color: #D9D9D9;
+    --black-color: #161616;
+    --font-Krona: 'Krona One', sans-serif;
+    --font-Krub: 'Krub', sans-serif;
+    --font-Lexend: 'Lexend', sans-serif;
+}
+body, html {
+    width: 100vw;
+    height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+#screen {
+    background: var(--white-color);
+}
+header {
+    background-color: var(--orange-color);
+}
+header h2 {
+    font-family: var(--font-Lexend);
+    color: var(--white-color);
+}
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container-main-cadaster {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+#container-type-acess {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+#container-type-acess h2{
+    color: var(--orange-color);
+}
+#selected-position{
+    color: var(--black-color);
+}
+#selected-position span{
+    color: var(--orange-color);
+}
+#option-acess{
+    display: flex;
+    gap: 1rem;
+}
+.acess {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    border: none;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+}
+.acess p{
+    color: var(--black-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-Krub);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+.acess:hover {
+    background-color: var(--orange-color);
+    transition: .3s;
+}
+.acess:hover > p {
+    color: var(--white-color) !important;
+    transition: .3s;
+}
+#container-cadaster-text {
+    width: 100%;
+}
+#container-text {
+    width: 50%;
+}
+#container-form {
+    text-align: center;
+}
+#container-form h2{
+    font-family: var(--font-Lexend);
+    color: var(--orange-color);
+}
+#container-text-apresention h3{
+    font-family: var(--font-Krub);
+    font-weight: 500;
+}
+#container-text-apresention p{
+    font-family: var(--font-Krub);
+    font-weight: 500;
+}
+.container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container-form label{
+    text-align: start;
+    padding-left: 1rem;
+    font-family: var(--font-Krona);
+    font-size: 0.7rem;
+}
+.container-form input{
+    background-color: var(--gray-color) !important;
+    color: var(--black-color);
+    padding: 14px 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-Krub);
+    font-weight: 500;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+#cadaster-link p a{
+    color: var(--orange-color);
+}
+#loginBtn {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    padding: 14px 10px;
+    border: none;
+    font-size: 12px;
+    font-family: var(--font-Krona);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+}
+#loginBtn:active,
+#loginBtn:focus {
+    box-shadow: 0px 0px 20px var(--orange-color);
+}
+@media screen and (max-width: 768px) {
+    .main-cadaster {
+        height: auto !important;
+    }
+    #infoPosition {
+        padding-bottom: 2rem;   
+    }   
+}
+@media screen and (min-width: 900px) {
+    #screen {
+        overflow: hidden !important;
+    }
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Krub:wght@200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --orange-color: #F59115;
+    --white-color: #FFFFFF;
+    --gray-color: #D9D9D9;
+    --black-color: #161616;
+    --font-Krona: 'Krona One', sans-serif;
+    --font-Krub: 'Krub', sans-serif;
+    --font-Lexend: 'Lexend', sans-serif;
+}
+body, html {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+header {
+    background-color: var(--orange-color);
+}
+header h2 {
+    font-family: var(--font-Lexend);
+    color: var(--white-color);
+}
+main {
+    height: 92vh;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container-main {
+    height: 90%;
+    display: flex;
+}
+#container-img {
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+}
+#container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#container-text {
+    width: 50%;
+}
+#container-form {
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 1rem;
+    margin: 0 auto;
+}
+#container-form h2{
+    font-family: var(--font-Lexend);
+    color: var(--orange-color);
+}
+#container-text-apresention h3{
+    font-family: var(--font-Krub);
+    font-weight: 500;
+}
+#container-text-apresention p{
+    font-family: var(--font-Krub);
+    font-weight: 500;
+}
+.container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container-form label{
+    text-align: start;
+    padding-left: 1rem;
+    font-family: var(--font-Krona);
+    font-size: 0.7rem;
+}
+.container-form input{
+    background-color: var(--gray-color) !important;
+    color: var(--black-color);
+    padding: 14px 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-Krub);
+    font-weight: 500;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+#cadaster-link {
+    position: relative;
+}
+hr {
+    height: 2px;
+    background-color: var(--orange-color);
+    border: none;
+    position: relative;
+}
+#cadaster-link p{
+    font-family: var(--font-Krona);
+    font-size: 0.8rem;
+    background-color: var(--white-color);
+    width: 16rem;
+    margin: 0 auto;
+    position: relative;
+    top: -0.5rem;
+    z-index: 1;
+}
+#cadaster-link p a{
+    color: var(--orange-color);
+}
+#loginBtn {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    padding: 14px 10px;
+    border: none;
+    font-size: 12px;
+    font-family: var(--font-Krona);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#loginBtn:active,
+#loginBtn:focus {
+    box-shadow: 0px 0px 20px var(--orange-color);
+}
