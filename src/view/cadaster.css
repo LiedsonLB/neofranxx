@@ -168,6 +168,30 @@ main {
 #loginBtn:focus {
     box-shadow: 0px 0px 20px var(--orange-color);
 }
+#erro {
+    font-family: var(--font-Lexend);
+    color: var(--black-color);
+
+}
+.erro {
+    color: #ff0000 !important;
+}
+.sucess {
+    color: #008000 !important;
+}
+.error-input {
+    box-shadow: 0px 0px 10px #ff0000;
+}
+.error-input:active,
+.error-input:focus {
+    box-shadow: none;
+}
+.selected {
+    background-color: var(--orange-color);
+}
+.selected > p {
+    color: var(--white-color);
+}
 @media screen and (max-width: 768px) {
     .main-cadaster {
         height: auto !important;

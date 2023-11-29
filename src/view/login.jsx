@@ -1,7 +1,7 @@
 import React from "react";
 import '../view/login.css';
 
-function loginPage() {
+function LoginPage() {
     return(
         <div>
             <div id="screen" className="d-flex flex-column">
@@ -42,4 +42,4 @@ function loginPage() {
     );
 };
 
-export default loginPage;
+export default LoginPage;
