@@ -13,7 +13,6 @@ body, html {
     width: 100vw;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 * {
     box-sizing: border-box;
@@ -39,6 +38,7 @@ main {
 }
 #container-main {
     height: 90%;
+    width: 95%;
     display: flex;
 }
 #container-img {
@@ -136,4 +136,30 @@ hr {
 #loginBtn:active,
 #loginBtn:focus {
     box-shadow: 0px 0px 20px var(--orange-color);
+}
+
+@media screen and (max-width: 930px) {
+    main {
+        height: auto !important;
+    }
+    #container-main {
+        flex-direction: column;
+    }
+    #container-img {
+        width: 90%;
+        height: 100%;
+        border-radius: 20px;
+        margin: 0 auto;
+        padding-block: 1rem;
+    }
+    #container-text {
+        width: 100% !important;
+        padding-bottom: 3rem;
+    }
+    #container-form {
+        width: 100% !important;
+    }
+    body,html {
+        overflow-y: scroll !important;
+    }
 }

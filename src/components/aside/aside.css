@@ -1,0 +1,72 @@
+aside {
+    height: 92vh;
+    width: 16.07vw;
+    background: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+#options li {
+    color: var(--white-color);
+    font-family: var(--font-Krub);
+    font-size: 1.3rem;
+    padding: 18px;
+    text-align: center;
+    border-right: 15px solid var(--black-color);
+    cursor: pointer;
+    transition: .3s;
+}
+#options li:hover,#options li:focus  {
+    border-right: 15px solid var(--orange-color);
+}
+#options li a {
+    color: var(--white-color);
+}
+#profile {
+    color: var(--white-color);
+    padding: 0;
+}
+#profile-link:hover {
+    background-color: #333232;
+    cursor: pointer;
+}
+#profile-link {
+    overflow: hidden;
+    max-width: 90%;
+}
+#profile a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+#profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+#profile-text p{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+}
+#profile-text h6{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    text-align: start;
+}
+#profile-img{
+    width: 40px;
+    height: 40px;
+}
+#profile-img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}

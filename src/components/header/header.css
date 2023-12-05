@@ -1,0 +1,12 @@
+header {
+    background-color: var(--orange-color);
+}
+#menu {
+    color: var(--white-color);
+    font-size: 2rem;
+    display: none;
+}
+header h2 {
+    font-family: var(--font-Lexend);
+    color: var(--white-color);
+}

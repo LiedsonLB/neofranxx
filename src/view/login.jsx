@@ -1,19 +1,19 @@
 import React from "react";
 import '../view/login.css';
 
+import Header from '../components/header/header';
+
 function LoginPage() {
     return(
         <div>
             <div id="screen" className="d-flex flex-column">
-            <header className="px-5">
-                <h2 className="py-1">NeoFranxx</h2>
-            </header>
+            <Header></Header>
             <main>
-                <div id="container-main" className="row container-fluid">
-                    <div id="container-img" className="col-md-6">
+                <div id="container-main" className="row md-container-fluid">
+                    <div id="container-img" className="col-md-6 col-12">
                         <img src="/img/front.png" alt="" />
                     </div>
-                    <div id="container-text" className="col-md-6">
+                    <div id="container-text" className="col-md-6 col-lg-12">
                         <div id="container-form">
                             <h2>NeoFranxx</h2>
                             <div id="container-text-apresention">

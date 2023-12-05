@@ -1,73 +1,115 @@
 import { useState } from 'react';
 import '../view/cadaster.css';
 
-function Cadaster() {
-    var [acess, setAcess] = useState();
-    var [error = "Preencha corretamente os campos", setError] = useState();
+import Header from '../components/header/header';
+
+function CadasterPage() {
+    const [acess, setAcess] = useState();
+    const [error, setError] = useState();
+    const [showPopup, setShowPopup] = useState(false);
 
     function verification() {
         const email = document.getElementById('email');
         const senha = document.getElementById('senha');
         const confsenha = document.getElementById('confsenha');
         const erro = document.getElementById('erro');
+        const modal = document.querySelector('.modal-body');
 
+        modal.classList.remove('popup-sucess');
+        modal.classList.add('popup-erro');
         erro.classList.remove('sucess');
         erro.classList.add('erro');
 
-        if(acess === undefined){
+        if(acess === undefined || acess === ''){
             setError("Informe sua posição");
+            document.querySelectorAll('.acess').forEach(function (el) {
+                el.classList.add('error-input');
+                setShowPopup(true)
+                modal.classList.add('popup-erro');
+            });
+            setTimeout(function () {
+                document.querySelectorAll('.acess').forEach(function (el) {
+                    el.classList.remove('error-input');
+                });
+                setShowPopup(false)
+            }, 3000);
         } 
         else if (email.value === '' || senha.value === '' || confsenha.value === '') {
             if(email.value === '') {
                 email.classList.add('error-input');
                 setError("Preencha seu email");
+                setShowPopup(true)
 
                 setTimeout(function () {
                     email.classList.remove('error-input');
-                    setError('Preencha corretamente os campos');
-                }, 2000);
+                    setShowPopup(false)
+                }, 3000);
             } else if(senha.value === '') {
                 senha.classList.add('error-input');
                 setError("Preencha sua senha");
+                setShowPopup(true)
 
                 setTimeout(function () {
                     senha.classList.remove('error-input');
-                    setError('Preencha corretamente os campos');
-                }, 2000);
+                    setShowPopup(false)
+                }, 3000);
             } else if(confsenha.value === '') {
                 confsenha.classList.add('error-input');
                 setError("Confirme sua senha");
+                setShowPopup(true)
 
                 setTimeout(function () {
                     confsenha.classList.remove('error-input');
                     setError('Preencha corretamente os campos');
-                }, 2000);
+                    setShowPopup(false)
+                }, 3000);
             }
+        } 
+        else if (senha.value.length < 8 || confsenha.value.length < 8) {
+            senha.classList.add('error-input');
+            confsenha.classList.add('error-input');
+            setError("A senha deve ter pelo menos 8 caracteres");
+            setShowPopup(true)
+    
+            setTimeout(function () {
+                erro.classList.remove('sucess');
+                erro.classList.add('erro');
+                senha.classList.remove('error-input');
+                confsenha.classList.remove('error-input');
+                setShowPopup(false)
+            }, 4000);
         } 
         else if (senha.value !== confsenha.value) {
             senha.classList.add('error-input');
             confsenha.classList.add('error-input');
             setError("Senhas Diferentes");
+            setShowPopup(true)
 
             setTimeout(function () {
                 erro.classList.remove('sucess');
                 erro.classList.add('erro');
                 senha.classList.remove('error-input');
                 confsenha.classList.remove('error-input');
-                setError('Preencha corretamente os campos');
-            }, 2000);
+                setShowPopup(false)
+            }, 3000);
         } 
         else {
+            setShowPopup(true)
             erro.classList.add('sucess');
             setError("Cadastro Enviado");
+
             email.value = "";
             senha.value = "";
             confsenha.value = "";
+            modal.classList.remove('popup-erro');
+            modal.classList.add('popup-sucess');
 
             document.querySelectorAll('.acess').forEach(function (el) {
                 el.classList.remove('selected');
             });
             setAcess("");
+
+            // Envia para o banco de dados
         }
     }
 
@@ -84,10 +126,21 @@ function Cadaster() {
     return(
         <div>
         <div id="screen" className="d-flex flex-column">
-        <header className="px-5 text-start">
-            <h2 className="py-1">NeoFranxx</h2>
-        </header>
-        <main className="main-cadaster container-fluid py-4">
+        <Header></Header>
+
+        <div id="sentPopup" className={`modal ${showPopup ? 'show' : ''}`} style={{ display: showPopup ? 'block' : 'none', pointerEvents: 'none' }} tabIndex="-1" role="dialog">
+            <div className="modal-dialog modal-dialog-start modal-lg" style={{ marginLeft: 'auto', marginRight: 0,  width: '300px'}}>
+                <div className="modal-content popup">
+                    <div className="modal-body d-flex justify-content-between">
+                        <p id='erro'>{error}</p>
+                        <button type="button" className="btn-close" onClick={() => setShowPopup(false)} style={{color: 'white !important'}}></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id='main-cadaster' className="main-cadaster container-fluid py-4">
             <div className="row container-fluid">
                 <div className="col-md-6" id="infoPosition">
                     <div id="container-type-acess">
@@ -115,7 +168,7 @@ function Cadaster() {
                             <h2>NeoFranxx</h2>
                             <div id="container-text-apresentation">
                                 <h3>Faça seu cadastro na NeoFranXX</h3>
-                                <p id='erro'>{error}</p>
+                                <p id='message'>Preencha corretamente os campos</p>
                             </div>
                             <div className="container-form my-2">
                                 <label for="email">Email:</label>
@@ -123,21 +176,21 @@ function Cadaster() {
                             </div>
                             <div className="container-form my-2">
                                 <label for="senha">Senha:</label>
-                                <input type="password" name="senha" id="senha" className="form-control" placeholder="senha14523"/>
+                                <input type="password" name="senha" id="senha" className="form-control" placeholder="senha14523" min={8} />
                             </div>
                             <div className="container-form my-2">
                                 <label for="confsenha">Confirmar Senha:</label>
-                                <input type="password" name="confsenha" id="confsenha" className="form-control" placeholder="senha14523"/>
+                                <input type="password" name="confsenha" id="confsenha" className="form-control" placeholder="senha14523" min={8} />
                             </div>
                             <button id="loginBtn" className="my-3" onClick={verification}>Cadastrar</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
     </div>
     );
 };
 
-export default Cadaster;
+export default CadasterPage;

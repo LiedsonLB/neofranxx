@@ -37,7 +37,11 @@ header h2 {
     font-family: var(--font-Lexend);
     color: var(--white-color);
 }
-main {
+.modal-body p, .modal-body button{
+    margin: 0 !important;
+    color: var(--white-color);
+}
+#main-cadaster {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -170,14 +174,43 @@ main {
 }
 #erro {
     font-family: var(--font-Lexend);
+    color: var(--white-color) !important;
+    font-size: 0.8rem;
+}
+#message {
+    font-family: var(--font-Lexend);
     color: var(--black-color);
-
+}
+.popup {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: popup .5s ease-in-out;
+  }
+@keyframes popup {
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.popup-erro {
+    background: #e5201f;
+    border-radius: 5px;
+    font-family: var(--font-Lexend);
+}
+.popup-sucess {
+    background: #5cb85c;
+    border-radius: 5px;
+    font-family: var(--font-Lexend);
 }
 .erro {
-    color: #ff0000 !important;
+    color: #d9534f !important;
 }
 .sucess {
-    color: #008000 !important;
+    color: #5cb85c !important;
 }
 .error-input {
     box-shadow: 0px 0px 10px #ff0000;
