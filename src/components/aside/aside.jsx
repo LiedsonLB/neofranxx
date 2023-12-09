@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 import '../aside/aside.css'
 
 function Aside(profile) {
     return(
         <aside>
             <div id="options">
-                <a href="w" className='options-link'><li>Home</li></a>
-                <a href="w" className='options-link'><li>Membros</li></a>
-                <a href="w" className='options-link'><li>Lojas</li></a>
-                <a href="w" className='options-link'><li>Financeiro</li></a>
-                <a href="w" className='options-link'><li>Produtos</li></a>
-                <a href="w" className='options-link'><li>Agenda</li></a>
+                <Link to="/home" className='options-link'><li>Home</li></Link>
+                <Link to="/members" className='options-link'><li>Membros</li></Link>
+                <Link to="/stores" className='options-link'><li>Lojas</li></Link>
+                <Link to="/financial" className='options-link'><li>Financeiro</li></Link>
+                <Link to="/products" className='options-link'><li>Produtos</li></Link>
+                <Link to="/agenda" className='options-link'><li>Agenda</li></Link>
             </div>
             <div id="profile" class="py-4 d-flex justify-content-center" data-toggle="tooltip" title={profile.email}>
                     {/**link do perfil */}

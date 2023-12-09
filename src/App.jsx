@@ -4,6 +4,7 @@ import LoginPage from './view/login';
 import CadasterPage from './view/cadaster';
 import HomePage from './view/home';
 import Loading from './components/loading';
+import Routers from './Routers/router';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
       {isLoading && <div className="LoadingOverlay"><Loading /></div>}
       <div className="Content">
-        <HomePage />
+        <Routers />
       </div>
     </div>
   );

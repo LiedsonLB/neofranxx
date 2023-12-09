@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Aside from "../components/aside/aside";
 import '../view/home.css'
+import { Outlet } from "react-router-dom";
 
 function HomePage() {
     const profile = {
@@ -20,7 +21,7 @@ function HomePage() {
                 <div id="home">
                     <Aside {...profile}></Aside>
                     <div id="main-home">
-                        {/* Recebe o conteúdo da tela */}
+                        <Outlet/>
                         <div style={{height: '150vh'}}></div>
                     </div>
                 </div>

@@ -2,8 +2,13 @@ import React from "react";
 import '../view/login.css';
 
 import Header from '../components/header/header';
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+    const navigate = useNavigate()
+    function verificLogin(){
+        navigate('/home')
+    }
     return(
         <div>
             <div id="screen" className="d-flex flex-column">
@@ -30,9 +35,9 @@ function LoginPage() {
                             </div>
                             <div id="cadaster-link">
                                 <hr/>
-                                <p> ainda não tem conta: <a href="../CadasterPage/cadaster.html">Criar</a></p>
+                                <p> ainda não tem conta: <a href="/cadaster">Criar</a></p>
                             </div>
-                            <button id="loginBtn">Logar</button>
+                            <button id="loginBtn" onClick={verificLogin}>Logar</button>
                         </div>
                     </div>
                 </div>

@@ -2,11 +2,13 @@ import { useState } from 'react';
 import '../view/cadaster.css';
 
 import Header from '../components/header/header';
+import { useNavigate } from 'react-router-dom';
 
 function CadasterPage() {
     const [acess, setAcess] = useState();
     const [error, setError] = useState();
     const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
 
     function verification() {
         const email = document.getElementById('email');
@@ -109,7 +111,7 @@ function CadasterPage() {
             });
             setAcess("");
 
-            // Envia para o banco de dados
+            navigate('/login');
         }
     }
 
