@@ -1,8 +1,5 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import LoginPage from './view/login';
-import CadasterPage from './view/cadaster';
-import HomePage from './view/home';
 import Loading from './components/loading';
 import Routers from './Routers/router';
 

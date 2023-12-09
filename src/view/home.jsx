@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import Aside from "../components/aside/aside";
 import '../view/home.css'
 import { Outlet } from "react-router-dom";
