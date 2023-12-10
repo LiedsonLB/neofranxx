@@ -8,8 +8,17 @@ const app = express()
 const port = 4000
 
 app.get('/', (req, res) => {
-  res.send('olá API')
+  res.send('Bem vindo a API')
 });
+
+// Post
+
+app.post('/auth/cadaster', async(req, res) => {
+
+  const {name, email, password} = req.body
+
+  res.send('usuario enviado')
+})
 
 // Credenciais
 const accessKey = process.env.USER;

@@ -127,15 +127,18 @@ hr {
     background-color: var(--orange-color);
     color: var(--white-color);
     padding: 14px 10px;
-    border: none;
+    border: 0.125rem solid var(--orange-color) !important;
     font-size: 12px;
     font-family: var(--font-Krona);
     border-radius: 10px;
     cursor: pointer;
 }
-#loginBtn:active,
+#loginBtn:active,#loginBtn:hover,
 #loginBtn:focus {
-    box-shadow: 0px 0px 20px var(--orange-color);
+    transition: color .1s ease-in-out,background-color .1s ease-in-out,border-color .1s ease-in-out;
+    background-color: transparent;
+    color: var(--orange-color);
+    transition: .8s;
 }
 
 @media screen and (max-width: 930px) {
