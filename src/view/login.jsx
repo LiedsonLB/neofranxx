@@ -20,7 +20,10 @@ function LoginPage() {
                     </div>
                     <div id="container-text" className="col-md-6 col-lg-12">
                         <div id="container-form">
-                            <h2>NeoFranxx</h2>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'}}>
+                                <img src="/img/erro404Img.png" style={{width: '55px'}} />
+                                <h2>NeoFranxx</h2>
+                            </div>
                             <div id="container-text-apresention">
                                 <h3>Seja Bem vindo Novamente !</h3>
                                 <p>Preencha corretamente os campos</p>

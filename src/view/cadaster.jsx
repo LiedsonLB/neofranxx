@@ -167,7 +167,10 @@ function CadasterPage() {
                 <div className="col-md-6">
                     <div id="container-cadaster-text">
                         <div className="container-form" id="container-form">
-                            <h2>NeoFranxx</h2>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'}}>
+                                <img src="/img/erro404Img.png" style={{width: '55px'}} />
+                                <h2>NeoFranxx</h2>
+                            </div>
                             <div id="container-text-apresentation">
                                 <h3>Faça seu cadastro na NeoFranXX</h3>
                                 <p id='message'>Preencha corretamente os campos</p>
