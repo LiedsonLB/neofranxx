@@ -122,7 +122,7 @@ header h2 {
     font-family: var(--font-Lexend);
     color: var(--orange-color);
 }
-#container-text-apresention h3{
+#container-text-apresention h5{
     font-family: var(--font-Krub);
     font-weight: 500;
 }
@@ -134,7 +134,7 @@ header h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
 }
 .container-form label{
     text-align: start;
@@ -233,6 +233,9 @@ header h2 {
     }
     #infoPosition {
         padding-bottom: 2rem;   
+    }
+    .container-form {
+        gap: 10px !important;
     }   
 }
 @media screen and (min-width: 900px) {

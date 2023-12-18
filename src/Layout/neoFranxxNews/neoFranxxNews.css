@@ -1,0 +1,249 @@
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+::-webkit-scrollbar {
+    background-color: var(--white-color);
+    width: 10px;
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--black-color);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+    border-radius: 100px;
+}
+#main-news{
+    text-align: left;
+    font-size: 1.4em;
+    background-color: var(--white-color);
+}
+h3 span{
+    color: darkorange;
+}
+h3{
+    font-family: var(--font-Krona);
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    color: var(--black-color);
+}
+h4 {
+    font-family: var(--font-Krona);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    color: var(--black-color);
+}
+#main-news-container {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+}
+#destaques {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.major-news {
+    width: 90%;
+}
+.major-news  a {
+    filter: brightness(0.5);
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.major-news a:hover {
+    filter: none;
+}
+.major-img {
+    width: 100%;
+    position: relative;
+}
+.major-text {
+    font-family: var(--font-Krub);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-left: 10px solid var(--orange-color);
+}
+.major-img img {
+    max-height: 420px !important;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.outhers-news {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    gap: 20px;
+}
+.secundary-news {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.outhers-news  a {
+    height: 55%;
+    filter: brightness(0.5);
+    transition: .5s;
+}
+.outhers-news a:hover {
+    filter: none;
+}
+.secundary-news p {
+    font-family: var(--font-Krub);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-left: 10px solid var(--orange-color);
+}
+.container-secundary-img {
+    width: 60%;
+}
+.container-secundary-img-1{
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/img/notebook.jpg);
+    background-size: cover;
+    background-position-y: center;
+    border-radius: 20px;
+}
+.container-secundary-img-2{
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/img/empresarios-corporativos-apertando-as-maos_53876-31495.avif);
+    background-size: cover;
+    background-position-y: center;
+    border-radius: 20px;
+}
+.container-secundary-text {
+    height: 50%;
+}
+/*SECTION DESTAQUES CONFIG*/
+/*CARDS CONFIG*/
+#cotacoes-cards {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 10px;
+    width: 95%;
+    overflow-x: auto;  /* Alteração: Mudança de 'scroll' para 'auto' */
+    white-space: nowrap;  /* Alteração: Impede que os elementos quebrem para a próxima linha */
+}
+#cotacoes-cards::-webkit-scrollbar {
+    background-color: var(--white-color);
+    width: 10px;
+    border-radius: 100px;
+}
+#cotacoes-cards::-webkit-scrollbar-thumb {
+    background-color: var(--black-color);
+    border-radius: 100px;
+}
+#cotacoes-cards::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+    border-radius: 100px;
+}
+.card-coin {
+    height: 100px;
+    box-shadow: 10px 10px 15px -16px rgba(0,0,0,.75);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 15px;
+    font-weight: bolder;
+    padding-left: 15px;
+    font-size: 0.8em;
+    font-family: var(--font-Krona);
+}
+.card-coin p {
+    margin-right: 1rem;
+    margin-bottom: 0px !important;
+}
+.coin > p strong{
+    background-color:  rgb(238, 141, 22);
+    padding: 20px;
+    border-radius: 100px;
+}
+.green > p{
+    color: green;
+    font-weight: bolder;
+}
+.red > p{
+    color: red;
+    font-weight: bolder;
+}
+/*CARDS CONFIG*/
+#last-news {
+    margin-top: 2rem;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    height: 400px;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.last-img-news {
+    height: 90%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.last-img-news img{
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+}
+.last-conatainer-text {
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.last-conatainer-text h3 {
+    color: var(--orange-color) !important;
+    font-family: var(--font-Krona);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+.last-conatainer-text h5 {
+    color: var(--black-color);
+    line-height: 1.6rem;
+}
+/* Animações */
+@keyframes leftAnimation {
+    0%{
+
+    }
+    100%{
+
+    }
+}
+@keyframes rightAnimation {
+    0%{
+
+    }
+    100%{
+        
+    }
+}

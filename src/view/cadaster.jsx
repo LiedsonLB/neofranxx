@@ -11,6 +11,7 @@ function CadasterPage() {
     const navigate = useNavigate();
 
     function verification() {
+        const name = document.getElementById('name');
         const email = document.getElementById('email');
         const senha = document.getElementById('senha');
         const confsenha = document.getElementById('confsenha');
@@ -37,7 +38,16 @@ function CadasterPage() {
             }, 3000);
         } 
         else if (email.value === '' || senha.value === '' || confsenha.value === '') {
-            if(email.value === '') {
+            if(name.value === '') {
+                name.classList.add('error-input');
+                setError("Preencha seu nome de usuário");
+                setShowPopup(true)
+
+                setTimeout(function () {
+                    name.classList.remove('error-input');
+                    setShowPopup(false)
+                }, 3000);
+            } else if(email.value === '') {
                 email.classList.add('error-input');
                 setError("Preencha seu email");
                 setShowPopup(true)
@@ -111,6 +121,8 @@ function CadasterPage() {
             });
             setAcess("");
 
+            // tempo da mensagem e direcionamento de sucesso
+            setTimeout(500);
             navigate('/login');
         }
     }
@@ -142,7 +154,7 @@ function CadasterPage() {
         </div>
 
 
-        <div id='main-cadaster' className="main-cadaster container-fluid py-4">
+        <div id='main-cadaster' className="main-cadaster container-fluid py-3">
             <div className="row container-fluid">
                 <div className="col-md-6" id="infoPosition">
                     <div id="container-type-acess">
@@ -168,24 +180,27 @@ function CadasterPage() {
                     <div id="container-cadaster-text">
                         <div className="container-form" id="container-form">
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'}}>
-                                <img src="/img/erro404Img.png" style={{width: '55px'}} />
                                 <h2>NeoFranxx</h2>
                             </div>
                             <div id="container-text-apresentation">
-                                <h3>Faça seu cadastro na NeoFranXX</h3>
+                                <h5 style={{ whiteSpace: 'nowrap' }}>Faça seu cadastro na NeoFranXX</h5>
                                 <p id='message'>Preencha corretamente os campos</p>
+                            </div>
+                            <div className="container-form my-2">
+                                <label for="name">Nome de usuário:</label>
+                                <input type="text" name="name" id="name" className="form-control" placeholder="Jhontan Moe"/>
                             </div>
                             <div className="container-form my-2">
                                 <label for="email">Email:</label>
                                 <input type="text" name="email" id="email" className="form-control" placeholder="exemple@email.com"/>
                             </div>
-                            <div className="container-form my-2">
+                            <div className="col-6 container-form my-2">
                                 <label for="senha">Senha:</label>
-                                <input type="password" name="senha" id="senha" className="form-control" placeholder="senha14523" min={8} />
+                                <input type="password" name="senha" id="senha" className="form-control" placeholder="senha14523" minLength={8} />
                             </div>
-                            <div className="container-form my-2">
+                            <div className="col-6 container-form my-2">
                                 <label for="confsenha">Confirmar Senha:</label>
-                                <input type="password" name="confsenha" id="confsenha" className="form-control" placeholder="senha14523" min={8} />
+                                <input type="password" name="confsenha" id="confsenha2" className="form-control" placeholder="senha14523" minLength={8} />
                             </div>
                             <button id="loginBtn" className="my-3" onClick={verification}>Cadastrar</button>
                         </div>
@@ -194,8 +209,8 @@ function CadasterPage() {
             </div>
         </div>
     </div>
-    </div>
-    );
+</div>
+);
 };
 
 export default CadasterPage;
