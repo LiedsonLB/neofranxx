@@ -24,6 +24,7 @@ function HomePage() {
                 <div id="home">
                     <Aside {...profile}></Aside>
                     <div id="main-home">
+                        <Outlet/>
                         <NeoFranxxNews/>
                     </div>
                 </div>

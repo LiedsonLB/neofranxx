@@ -115,7 +115,7 @@ h4 {
 .container-secundary-img-1{
     width: 100%;
     height: 100%;
-    background-image: url(/public/img/notebook.jpg);
+    background-image: url(/public/img/empresarios-corporativos-apertando-as-maos_53876-31495.avif);
     background-size: cover;
     background-position-y: center;
     border-radius: 20px;
@@ -123,7 +123,7 @@ h4 {
 .container-secundary-img-2{
     width: 100%;
     height: 100%;
-    background-image: url(/public/img/empresarios-corporativos-apertando-as-maos_53876-31495.avif);
+    background-image: url(/public/img/notebook.jpg);
     background-size: cover;
     background-position-y: center;
     border-radius: 20px;
@@ -245,5 +245,41 @@ h4 {
     }
     100%{
         
+    }
+}
+@media screen and (max-width: 995px) {
+    #destaques {
+        flex-direction: column;
+        height: auto !important;
+    }
+    .outhers-news {
+        width: 100% !important;
+    }
+    .secundary-news {
+        flex-direction: row !important;
+    }
+    .container-secundary-img-1, .container-secundary-img-2 {
+        width: 50% !important;
+        height: auto !important;
+        background-position-x: center;
+    }
+    .container-secundary-text {
+        width: 80% !important;
+    }
+    #cotacoes-cards {
+        padding: 1rem 0rem;
+    }
+    #last-news {
+        flex-direction: column;
+        height: auto !important;
+        margin-top: 1rem;
+        gap: 0px !important;
+    }
+    .last-img-news {
+        width: 100% !important;
+        height: 80% !important;
+    }
+    .last-conatainer-text {
+        width: 100% !important;
     }
 }
