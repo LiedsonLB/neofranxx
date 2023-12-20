@@ -1,27 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Krub:wght@200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root {
-    --orange-color: #F59115;
-    --white-color: #FFFFFF;
-    --gray-color: #D9D9D9;
-    --black-color: #161616;
-    --font-Krona: 'Krona One', sans-serif;
-    --font-Krub: 'Krub', sans-serif;
-    --font-Lexend: 'Lexend', sans-serif;
-}
-body, html {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-a {
-    text-decoration: none;
-}
 header {
     background-color: var(--orange-color);
 }

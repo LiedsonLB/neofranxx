@@ -1,8 +1,11 @@
 import React from 'react'
+import '../agenda/agenda.css'
 
 const Stores = () => {
   return (
-    <div>Stores</div>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <h1>Página das Lojas</h1>
+    </div>
   )
 }
 

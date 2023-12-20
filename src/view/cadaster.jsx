@@ -37,7 +37,7 @@ function CadasterPage() {
                 setShowPopup(false)
             }, 3000);
         } 
-        else if (email.value === '' || senha.value === '' || confsenha.value === '') {
+        else if (name.value === '' || email.value === '' || senha.value === '' || confsenha.value === '') {
             if(name.value === '') {
                 name.classList.add('error-input');
                 setError("Preencha seu nome de usuário");
@@ -200,7 +200,7 @@ function CadasterPage() {
                             </div>
                             <div className="col-6 container-form my-2">
                                 <label for="confsenha">Confirmar Senha:</label>
-                                <input type="password" name="confsenha" id="confsenha2" className="form-control" placeholder="senha14523" minLength={8} />
+                                <input type="password" name="confsenha" id="confsenha" className="form-control" placeholder="senha14523" minLength={8} />
                             </div>
                             <button id="loginBtn" className="my-3" onClick={verification}>Cadastrar</button>
                         </div>

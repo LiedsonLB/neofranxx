@@ -37,7 +37,6 @@ app.post('/auth/cadaster', async(req, res) => {
     }
    */
   
-
   const user = new User({
     name,
     email,

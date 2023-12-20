@@ -1,8 +1,11 @@
 import React from 'react'
+import '../finacial/finacial.css'
 
 const Finacial = () => {
   return (
-    <div>Finacial</div>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <h1>Página de Financias</h1>
+    </div>
   )
 }
 
