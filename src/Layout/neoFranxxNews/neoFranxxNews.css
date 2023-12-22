@@ -20,10 +20,10 @@ a {
     font-size: 1.4em;
     background-color: var(--white-color);
 }
-h3 span{
+#title-news span{
     color: darkorange;
 }
-h3{
+#title-news{
     font-family: var(--font-Krona);
     margin-bottom: 2rem;
     padding-top: 1rem;

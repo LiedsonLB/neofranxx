@@ -25,6 +25,9 @@ aside {
 #options li:hover,#options li:focus  {
     border-right: 15px solid var(--orange-color);
 }
+.select_op {
+    border-right: 15px solid var(--orange-color);
+}
 #options li a {
     color: var(--white-color);
 }

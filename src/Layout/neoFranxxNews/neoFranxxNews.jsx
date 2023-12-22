@@ -28,12 +28,12 @@ const NeoFranxxNews = () => {
   return (
     <main id="main-news">
         <div id="main-news-container">
-            <h3><span>NeoxFranxx </span>News</h3>
+            <h3 id='title-news'><span>NeoxFranxx </span>News</h3>
             
             <h4>Destaques</h4>
             <section id="destaques">   
                 <div className="major-news">
-                    <a href="\home">
+                    <a href="\majornews">
                         <div className="major-img">
                             <img src="/img/vista-frontal-do-corte-da-fita-vermelha-na-inauguracao-do-edificio_8353-10570.avif" alt="img-person"/>
                         </div>
@@ -44,7 +44,7 @@ const NeoFranxxNews = () => {
                 </div>
 
                 <div className="outhers-news">
-                    <a href="\login">
+                    <a href="\news1">
                         <div className="secundary-news">
                             <div className="container-secundary-img-2"></div>
                             <div className="container-secundary-text">
@@ -52,7 +52,7 @@ const NeoFranxxNews = () => {
                             </div>
                         </div>
                     </a>
-                    <a href="\login">
+                    <a href="\news2">
                         <div className="secundary-news">
                             <div className="container-secundary-img-1"></div>
                             <div className="container-secundary-text">

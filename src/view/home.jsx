@@ -8,6 +8,7 @@ import Finacial from '../Layout/finacial/finacial';
 import Products from '../Layout/products/products';
 import Agenda from '../Layout/agenda/agenda';
 import NeoFranxxNews from "../Layout/neoFranxxNews/neoFranxxNews";
+import Member from "../Layout/member/member";
 
 function HomePage() {
     const [currentComponent, setCurrentComponent] = useState('NeoFranxxNews');
@@ -27,7 +28,7 @@ function HomePage() {
         case 'NeoFranxxNews':
             return <NeoFranxxNews />;
         case 'members':
-            return <Members />;
+            return <Member />;
         case 'stores':
             return <Stores />;
         case 'finacial':

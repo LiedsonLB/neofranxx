@@ -1,0 +1,129 @@
+#container-calendar {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: var(--black-color);
+    font-family: var(--font-Krub);
+    background-color: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.calendar {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 521px;
+}
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--orange-color);
+    color: #fff;
+    padding: 10px 30px;
+}
+.month span {
+    cursor: pointer;
+    font-size: 20px;
+}
+.weekdays {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+    font-weight: bold;
+}
+.weekdays li {
+    padding: 10px;
+}
+.days {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.days li {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    font-family: var(--font-Krona);
+    cursor: pointer;
+}
+.days li:hover, .days li:focus  {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+.event-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    position: absolute;
+}
+.event-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.event-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.days li.has-events {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+}
+.event-form button {
+    background-color: var(--orange-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#container-event-actionBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#eventsContainer {
+    color: var(--black-color);
+    height: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+#eventsContainer ul {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+#eventsContainer ul li {
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.25);
+    background: var(--white-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#eventsContainer ul li strong {
+    color: var(--orange-color);
+}

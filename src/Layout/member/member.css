@@ -1,0 +1,121 @@
+#main-members {
+    background-color: var(--white-color);
+    height: 100%;
+}
+#main-container-members {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+}
+#tittle-members{
+    font-family: var(--font-Krona);
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    color: var(--black-color);
+    text-align: start;
+}
+#user {
+    display: flex;
+    height: 80%;
+}
+.user-profile {
+    width: 50%;
+}
+.infos {
+    width: 50%;
+    overflow-y: auto;
+}
+.infos::-webkit-scrollbar {
+    background-color: var(--white-color);
+    width: 10px;
+    border-radius: 100px;
+}
+.infos::-webkit-scrollbar-thumb {
+    background-color: var(--black-color);
+    border-radius: 100px;
+}
+.infos::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+    border-radius: 100px;
+}
+.infos p {
+    margin-top: 0.5rem;
+}
+.infos p span{
+    font-family: var(--font-Krub);
+    font-weight: 500;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: start;
+    color: var(--orange-color);
+}
+.user-status {
+    border-radius: 100px;
+    padding: 0px 20px;
+    text-align: center !important;
+    justify-content: center !important;
+    max-width: 200px;
+    color: var(--black-color) !important;
+}
+.active {
+    background-color: #90EE90;
+}
+img{
+    width: 35%;
+    border-radius: 1000px;
+}
+#user-name {
+    color: var(--orange-color);
+    letter-spacing: 2px;
+    padding-block: 0.5rem 0rem;
+    font-family: var(--font-Krona);
+}
+#user-email {
+    text-decoration: underline;
+}
+#user-cargo {
+    padding-block: 0.5rem 0.5rem;
+}
+#social-midia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#social-midia a{
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: 0.5px solid;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+main {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cwhite{
+   background-color: white;
+   color: var(--black-color);
+}
+.cblue{
+    background-color: blue;
+    color: white;
+}
+.cblack{
+    color: white;
+    background-color: black;
+}
+.infos{
+    font-size: 1.4em;
+    font-weight: bolder;
+    border-left: 2px solid orange;
+    text-align: justify;
+    padding-left: 25px;
+}

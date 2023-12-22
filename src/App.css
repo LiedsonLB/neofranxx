@@ -1,4 +1,5 @@
 /* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Krub:wght@200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .App {
   position: relative;
@@ -17,7 +18,6 @@
   z-index: 1000; /* Z-index alto para garantir que esteja na frente da página */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Krub:wght@200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --orange-color: #F59115;
     --white-color: #FFFFFF;
