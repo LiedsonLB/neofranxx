@@ -28,7 +28,7 @@ function HomePage() {
         case 'NeoFranxxNews':
             return <NeoFranxxNews />;
         case 'members':
-            return <Member />;
+            return <Members />;
         case 'stores':
             return <Stores />;
         case 'finacial':

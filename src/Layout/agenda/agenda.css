@@ -13,12 +13,49 @@
     gap: 20px;
     flex-wrap: wrap;
 }
+#container-calendar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--white-color) !important;
+}
+#menu-nav-agenda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.menu-selection {
+    color: var(--white-color) !important;
+    background-color: var(--orange-color) !important;
+    border: 1px solid var(--orange-color) !important;
+}
+#menu-nav-agenda a{
+    font-family: var(--font-Krub);
+    color: var(--white-color);
+    width: 150px;
+    border-radius: 100px;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--white-color);
+}
+#menu-nav-agenda a:hover{
+    background-color:var(--orange-color) ;
+    border: 1px solid var(--orange-color);
+    color: var(--white-color);
+}
 .calendar {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     min-height: 521px;
+    margin-bottom: 2rem;
 }
 .month {
     display: flex;
@@ -97,7 +134,7 @@
 }
 #eventsContainer {
     color: var(--black-color);
-    height: 80%;
+    max-height: 80%;
     border-radius: 10px;
     padding: 10px;
     display: flex;

@@ -70,16 +70,26 @@ const Agenda = () => {
             }
         };
 
-        const renderEvents = () => {
-          let html = '<ul>';
+        const formatDateTime = (date) => {
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const formattedDateTime = new Intl.DateTimeFormat('pt-BR', options).format(date);
+            return formattedDateTime;
+        };
 
-          events.forEach(event => {
-              html += `<li><strong>${formatDate(event.date)}:</strong> ${event.description}</li>`;
-          });
-      
-          html += '</ul>';
-          document.getElementById('eventsContainer').innerHTML = html;
-      };      
+        const renderEvents = () => {
+            // Ordenar os eventos por data antes de renderizar
+            events.sort((a, b) => a.date - b.date);
+
+            let html = '<ul>';
+    
+            events.forEach(event => {
+                const formattedDateTime = formatDateTime(event.date);
+                html += `<li><strong>${formattedDateTime}:</strong> ${event.description}</li>`;
+            });
+    
+            html += '</ul>';
+            document.getElementById('eventsContainer').innerHTML = html;
+        };    
 
         const getEventsForDate = (date) => {
             return events.filter(event => isSameDay(event.date, date));
@@ -159,6 +169,16 @@ const Agenda = () => {
 
     return (
         <div id="container-calendar">
+            <div id="container-calendar-header">
+                <h1><i class="bi bi-calendar-date"></i> Agenda</h1>
+                <nav id="menu-nav-agenda">
+                    <a href="#" class="menu-selection">Todos</a>
+                    <a href="#">A-Z <i class="bi bi-arrow-down-up"></i></a>
+                    <a href="#">Cargo <i class="bi bi-caret-down-fill"></i></a>
+                    <a href="#">Localização <i class="bi bi-caret-down-fill"></i></a>
+                </nav>
+            </div>
+
             <div className="calendar">
                 <div className="month">
                     <span id="prevMonth">&#10094;</span>

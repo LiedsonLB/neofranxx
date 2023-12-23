@@ -28,7 +28,7 @@ const NeoFranxxNews = () => {
   return (
     <main id="main-news">
         <div id="main-news-container">
-            <h3 id='title-news'><span>NeoxFranxx </span>News</h3>
+            <h3 id='title-news'><i class="bi bi-newspaper"></i> <span>NeoxFranxx </span>News</h3>
             
             <h4>Destaques</h4>
             <section id="destaques">   
