@@ -159,3 +159,11 @@ h1{
 .card-member a:hover, .card-member a:focus{
     color: var(--orange-color);
 }
+.bi.bi-gender-male {
+    color: blue;
+    font-family: var(--font-Krona);
+}
+.bi.bi-gender-female {
+    color: rgb(192, 19, 114);
+    font-family: var(--font-Krona);
+}

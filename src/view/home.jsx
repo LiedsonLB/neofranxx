@@ -2,13 +2,15 @@ import Aside from "../components/aside/aside";
 import '../view/home.css'
 import { useState } from "react";
 
+import Member from "../Layout/member/member";
+import { Route } from 'react-router-dom';
+
 import Members from '../Layout/members/members';
 import Stores from '../Layout/stores/stores';
 import Finacial from '../Layout/finacial/finacial';
 import Products from '../Layout/products/products';
 import Agenda from '../Layout/agenda/agenda';
 import NeoFranxxNews from "../Layout/neoFranxxNews/neoFranxxNews";
-import Member from "../Layout/member/member";
 
 function HomePage() {
     const [currentComponent, setCurrentComponent] = useState('NeoFranxxNews');
