@@ -141,6 +141,7 @@
     align-items: center;
     justify-content: center;
     overflow-y: auto;
+    min-width: 40%;
 }
 #eventsContainer ul {
     margin: 0;

@@ -68,10 +68,13 @@ const Members = () => {
               <h6>{member.name}</h6>
               <p>{member.email}</p>
               <div class="card-actions-members">
-                <i
-                  className="bi bi-info-circle-fill"
-                  onClick={() => navigate(`/member/${member.id}`, { state: { user: member } })}
-                ></i>
+                <a href="/" 
+                  onClick={(e) => { 
+                  e.preventDefault();
+                  navigate(`/member/${member.id}`, { state: { user: member } })}
+                  }>
+                  <i className="bi bi-info-circle-fill"></i>
+                </a>
                 <a href="#"><i class="bi bi-pen-fill"></i></a>
                 <a href="#"><i class="bi bi-trash-fill"></i></a>
               </div>

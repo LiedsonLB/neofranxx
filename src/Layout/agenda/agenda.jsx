@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../agenda/agenda.css';
 
 const Agenda = () => {
+    const [events, setEvents] = useState([]);
+
     const getMonthName = (month) => {
         const monthNames = [
             'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
@@ -23,18 +25,14 @@ const Agenda = () => {
         let currentDate = new Date();
         let currentMonth = currentDate.getMonth();
         let currentYear = currentDate.getFullYear();
-        let events = [];
 
-        const updateMonth = (monthOffset) => {
-            currentMonth += monthOffset;
-            if (currentMonth < 0) {
-                currentMonth = 11;
-                currentYear--;
-            } else if (currentMonth > 11) {
-                currentMonth = 0;
-                currentYear++;
-            }
-            renderCalendar(currentMonth, currentYear);
+        const getEventsForDate = (date) => {
+            return events.filter(event => isSameDay(event.date, date));
+        };
+
+        const hideEventForm = () => {
+            eventForm.style.display = 'none';
+            calendar.style.filter = 'brightness(1)';
         };
 
         const renderCalendar = (month, year) => {
@@ -70,6 +68,21 @@ const Agenda = () => {
             }
         };
 
+        renderCalendar(currentMonth, currentYear);
+        hideEventForm();
+
+        const updateMonth = (monthOffset) => {
+            currentMonth += monthOffset;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        };
+
         const formatDateTime = (date) => {
             const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
             const formattedDateTime = new Intl.DateTimeFormat('pt-BR', options).format(date);
@@ -91,10 +104,6 @@ const Agenda = () => {
             document.getElementById('eventsContainer').innerHTML = html;
         };    
 
-        const getEventsForDate = (date) => {
-            return events.filter(event => isSameDay(event.date, date));
-        };
-
         const isSameDay = (date1, date2) => {
             return (
                 date1.getFullYear() === date2.getFullYear() &&
@@ -110,11 +119,6 @@ const Agenda = () => {
             calendar.style.filter = 'brightness(0.5)';
         };
 
-        const hideEventForm = () => {
-          eventForm.style.display = 'none';
-          calendar.style.filter = 'brightness(1)';
-      };
-
       const addEvent = (date, description) => {
         const formattedDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
     
@@ -124,6 +128,7 @@ const Agenda = () => {
             events[existingEventIndex].description = description;
         } else {
             events.push({ date: formattedDate, description });
+            setEvents([...events, { date: formattedDate, description }]);
         }
       };
 
