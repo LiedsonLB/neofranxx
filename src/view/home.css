@@ -3,6 +3,17 @@ li {
 }
 header {
     background-color: var(--orange-color);
+    justify-content: space-between;
+}
+#clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-Krona);
+    color: var(--white-color);
+    margin: 0 !important;
+    gap: 5px;
+    font-size: clamp(0.7rem, 2vw, 1rem);
 }
 #menu {
     color: var(--white-color);

@@ -6,9 +6,15 @@ import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
     const navigate = useNavigate()
+
     function verificLogin(){
         navigate('/home')
     }
+    function handleCadastroClick(e) {
+        e.preventDefault();
+        navigate('/cadaster');
+    }
+
     return(
         <div>
             <div id="screen" className="d-flex flex-column">
@@ -21,7 +27,7 @@ function LoginPage() {
                     <div id="container-text" className="col-md-6 col-lg-12">
                         <div id="container-form">
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'}}>
-                                <img src="/img/erro404Img.png" style={{width: '55px'}} />
+                                <img src="/img/erro404Img.png" alt='imagem de erro 404' style={{width: '55px'}} />
                                 <h2>NeoFranxx</h2>
                             </div>
                             <div id="container-text-apresention">
@@ -38,7 +44,7 @@ function LoginPage() {
                             </div>
                             <div id="cadaster-link">
                                 <hr/>
-                                <p> ainda não tem conta: <a href="/cadaster">Criar</a></p>
+                                <p> ainda não tem conta: <a href="" onClick={handleCadastroClick}>Criar</a></p>
                             </div>
                             <button id="loginBtn" onClick={verificLogin}>Logar</button>
                         </div>

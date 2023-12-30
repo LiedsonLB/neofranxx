@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import '../members/members.css'
 
 const Members = () => {
@@ -62,19 +61,21 @@ const Members = () => {
         <div id="members-container">
           {filteredMembers.map((member) => (
             <div key={member.id} class="card-member">
-              <img src={member.picture} alt="Card-img"/>
-              <h6>{member.name} <i class={"bi bi-gender-" + member.gender}></i></h6>
+              <div className='container-card-img-members'>
+                <img src={member.picture} alt="Card-img"/>
+                <div class="status"></div>
+              </div>
+              <h6>{member.name}</h6>
               <p>{member.email}</p>
               <div class="card-actions-members">
-                <a href=""><i
+                <i
                   className="bi bi-info-circle-fill"
                   onClick={() => navigate(`/member/${member.id}`, { state: { user: member } })}
                 ></i>
-                </a>
                 <a href="#"><i class="bi bi-pen-fill"></i></a>
                 <a href="#"><i class="bi bi-trash-fill"></i></a>
               </div>
-              <div class="status"><p>ativo</p></div>
+              <i class={"bi bi-gender-" + member.gender + " gender"}></i>
             </div>
           ))}
         </div>
