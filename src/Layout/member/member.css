@@ -118,4 +118,5 @@ main {
     border-left: 2px solid orange;
     text-align: justify;
     padding-left: 25px;
+    max-height: 500px;
 }

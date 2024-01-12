@@ -177,10 +177,8 @@ const Agenda = () => {
             <div id="container-calendar-header">
                 <h1><i class="bi bi-calendar-date"></i> Agenda</h1>
                 <nav id="menu-nav-agenda">
-                    <a href="#" class="menu-selection">Todos</a>
-                    <a href="#">A-Z <i class="bi bi-arrow-down-up"></i></a>
-                    <a href="#">Cargo <i class="bi bi-caret-down-fill"></i></a>
-                    <a href="#">Localização <i class="bi bi-caret-down-fill"></i></a>
+                    <a href="#" class="menu-selection">Lembretes</a>
+                    <a href="#">Aniversários<i class="bi bi-caret-down-fill"></i></a>
                 </nav>
             </div>
 

@@ -635,6 +635,9 @@ footer h5 {
         line-height: 1.6rem;
         font-size: clamp(1rem, 2vw, 1rem);
     }
+    .carousel-container-outher {
+        display: none;
+    }
     #container-skills-info {
         flex-direction: column-reverse;
         padding: 0;
@@ -649,6 +652,9 @@ footer h5 {
     }
     #container-skills {
         width: 100%;
+    }
+    .skill {
+        padding-left: 0;
     }
     #container-footer{
         flex-direction: column;

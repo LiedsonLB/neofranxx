@@ -51,3 +51,26 @@
     color: var(--orange-color);
     text-decoration: underline !important;
 }
+@media screen and (max-width: 995px) {
+    #screen-error {
+        min-height: 100vh !important;
+        height: auto;
+        padding: 2rem 0;
+    }
+    #container-error {
+        flex-direction: column;
+    }
+    #img-error {
+        margin: 0 auto;
+    }
+    #text-error {
+        width: 100% !important;
+    }
+    #text-error h1{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .br-error {
+        display: none;
+    }
+}

@@ -23,8 +23,8 @@ const Member = (props) => {
 
                     <h5 id="user-cargo">{user.email}</h5>
                     <div id="social-midia">
-                        <a href={'mailto:' + user.email} class="cwhite"><i class="bi bi-envelope-fill"></i> {user.email}</a>
-                        <a href={user.cell} class="cblack"><i class="bi bi-telephone-fill"></i> {user.cell}</a>
+                        <a href={'mailto:' + user.email} class="cwhite"><i class="bi bi-envelope-fill"></i> Email</a>
+                        <a href={user.cell} class="cblack"><i class="bi bi-telephone-fill"></i> Telefone</a>
                         <a href={user.email} class="cblue"><i class="bi bi-linkedin"></i> Linkedin</a>
                     </div>
                 </section>

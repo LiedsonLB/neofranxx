@@ -153,7 +153,6 @@ function CadasterPage() {
             </div>
         </div>
 
-
         <div id='main-cadaster' className="main-cadaster container-fluid py-3">
             <div className="row container-fluid">
                 <div className="col-md-6" id="infoPosition">

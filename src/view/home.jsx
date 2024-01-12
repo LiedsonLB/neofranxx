@@ -2,15 +2,13 @@ import Aside from "../components/aside/aside";
 import '../view/home.css'
 import { useEffect, useState } from "react";
 
-import Member from "../Layout/member/member";
-import { Route } from 'react-router-dom';
-
 import Members from '../Layout/members/members';
 import Stores from '../Layout/stores/stores';
 import Finacial from '../Layout/finacial/finacial';
 import Products from '../Layout/products/products';
 import Agenda from '../Layout/agenda/agenda';
 import NeoFranxxNews from "../Layout/neoFranxxNews/neoFranxxNews";
+import EditProfile from "../Layout/editProfile/editProfile";
 
 function HomePage() {
     const [currentComponent, setCurrentComponent] = useState('NeoFranxxNews');
@@ -56,6 +54,8 @@ function HomePage() {
             return <Products />;
         case 'agenda':
             return <Agenda />;
+        case 'editProfile':
+            return <EditProfile />
         default:
             return <NeoFranxxNews />;
         }

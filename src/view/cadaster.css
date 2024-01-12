@@ -47,6 +47,7 @@ header h2 {
 #option-acess{
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 .acess {
     width: 120px;
@@ -209,7 +210,10 @@ header h2 {
     }
     .container-form {
         gap: 10px !important;
-    }   
+    }
+    #container-form {
+        padding: 0 !important;
+    }
 }
 @media screen and (min-width: 900px) {
     #screen {
